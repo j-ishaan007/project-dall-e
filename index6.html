@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Generation</title>
+    <style>
+
+        @import url('https://fonts.googleapis.com/css2?family=Sedan+SC&display=swap');
+
+        *{ 
+        margin:0;
+        padding:0;
+        box-sizing: border-box;
+        }
+        
+        html,body{
+        width:100%;
+        height:100%;
+        }
+
+        #heading{
+            display:flex;
+            justify-content: space-between;
+            align-items:center;
+            width:100%;
+            height: 15vh;
+            background-color: #131027;
+        }
+
+        #heading h1{
+            /* color: #131027; */
+            color: white;
+            font-family:"Sedan SC", serif;
+            font-size: 2rem;
+            margin:0 auto 0 20vw;
+            font-weight: 200;
+        }
+
+        #content p{
+            font-weight:500;
+            margin: 10px auto;
+            color: #131027;
+            font-family: "Sedan SC", serif;
+            font-size: 1.2rem;
+            text-align: center;
+            margin: 8vh auto 5vh auto;
+        }
+
+        #content-image{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #content-image img{
+            width: 95%;
+            height:auto;
+        }
+
+        #button-container{
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            /* font-size: 12px; */
+        }
+
+        #button-container button{
+            background-color: #131027;
+            color: #fff;
+            padding: 0.7em 2em 0.7em 2em;
+            font-size: 20px;
+            border-radius: 50px;
+            border:none;
+            font-family:"Sedan SC", serif;
+            cursor: pointer;
+            transition: transform 0.3s;
+            margin-bottom: 5vw;
+        }
+
+
+        button:active{
+            cursor:pointer;
+            transform: scale(1.2);
+            color:white;
+            text-decoration: none;
+        }
+
+        #image2{
+            width: 95%;
+            height: auto;
+            margin: 1.2em 1.2em;
+        }
+
+        #cards{
+            margin-top: 2em;
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        #card1{
+            height: 420px;
+            width: 320px;
+            background: linear-gradient(#FEFDFF,#CDD0F0);
+            border-radius: 20px;
+            text-align: center;
+        }
+
+        #card1 img{
+            margin-top: 10px;
+        }
+
+        #card1 h2{
+            margin-top:6px;
+            font-size: 2.2em;
+            font-family: "Sedan SC", serif;
+            color:black;
+        }
+        
+        #card1 h4{
+            margin-top:4px;
+            font-size: 1.4em;
+            font-family: "Sedan SC", serif;
+            color: black;
+            padding:1.2em;
+        }
+
+        #card1 button{
+            height: 32px;
+            width: 96px;
+            border-radius: 10px;
+            border:none;
+            color: black;
+            background-color: #fff;
+            font-weight: 600;
+            box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.2);
+            cursor:pointer;
+        }
+
+        #card2{
+            height: 420px;
+            width: 320px;
+            background: linear-gradient(#FEFDFF,#CDD0F0);
+            border-radius: 20px;
+            text-align: center;
+        }
+
+        #card2 img{
+            margin-top: 10px;
+        }
+
+        #card2 h2{
+            margin-top:6px;
+            font-size: 2.2em;
+            font-family: "Sedan SC", serif;
+            color:black;
+        }
+
+        #card2 h4{
+            margin-top:4px;
+            font-size: 1.4em;
+            font-family: "Sedan SC", serif;
+            color: black;
+            padding:1.2em;
+        }
+
+        #card2 button{
+            height: 32px;
+            width: 96px;
+            border-radius: 10px;
+            border:none;
+            color: black;
+            background-color: #fff;
+            font-weight: 600;
+            box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+        }
+
+        #card3{
+            height: 420px;
+            width: 320px;
+            background: linear-gradient(#FEFDFF,#CDD0F0);
+            border-radius: 20px;
+            text-align: center;
+        }
+
+        #card3 img{
+            margin-top: 10px;
+        }
+
+        #card3 h2{
+            margin-top:6px;
+            font-size: 2.2em;
+            font-family: "Sedan SC", serif;
+            color:black;
+        }
+
+        #card3 h4{
+            margin-top:4px;
+            font-size: 1.4em;
+            font-family: "Sedan SC", serif;
+            color: black;
+            padding:1.2em;
+        }
+
+        #card3 button{
+            height: 32px;
+            width: 96px;
+            border-radius: 10px;
+            border:none;
+            color: black;
+            background-color: #fff;
+            font-weight: 600;
+            box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div id="heading">
+            <img src="gsfc-logo-white.png" alt="Gsfc Logo">
+            <h1>Social Media Image Generator</h1>
+        </div>
+    </header>
+
+    <div id="content">
+        <p>"Unleash Imagination with DALL&ndash;E: Transforming Words into Stunning Visuals"</p>
+    </div>
+
+    <div id="content-image">
+        <img src="Untitledmain2.png" alt="display-image">
+    </div>
+
+    <div id="button-container">
+        <button><a href="" style="color:#fff;text-decoration:none;">Start Generating</a></button>
+    </div>
+
+
+    <div id="image2">
+        <img src="image2.png" alt="demo-image">
+    </div>
+
+
+   <div id="cards">
+        <div id="card1">
+            <img src="3.png" alt="display-img">
+            <h2>Image Generator</h2>
+            <h4>Enter Text and description to generate image.</h4>
+            <button>Explore</button>
+        </div>
+        <div id="card2">
+            <img src="1.png" alt="display-image">
+            <h2>Image Editor</h2>
+            <h4>Upload image and add magic to it using editing tools.</h4>
+            <button>Explore</button>
+        </div>
+        <div id="card3">
+            <img src="2.png" alt="display-image">
+            <h2>Post Generator</h2>
+            <h4>Create post for placements and guest lectures.</h4>
+            <button>Explore</button>
+        </div>
+   </div>
+</body>
+</html>
